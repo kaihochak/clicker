@@ -1,0 +1,33 @@
+#randomButton {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Makes the button circular */
+    background-color: blue; /* Set your desired background color */
+    color: white; /* Set your desired text color */
+    border: none;
+    display: none;
+}
+#start {
+    position: fixed;
+    width: 500px;
+    height: 200px;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100px; /* Makes the button circular */
+    background-color: green; /* Set your desired background color */
+    color: white; /* Set your desired text color */
+    border: none;
+}
+#winScreen {
+    background-color: red;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2; /* Ensure the container appears above other elements */
+    display: none;
+}
