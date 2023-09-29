@@ -1,9 +1,30 @@
+
 #randomButton {
     position: absolute;
     width: 250px;
     height: 250px;
     border-radius: 50%; /* Makes the button circular */
     background-color: blue; /* Set your desired background color */
+    color: white; /* Set your desired text color */
+    z-index: 2;
+    border: none;
+    display: none;
+}
+#checkboxContainer {
+    font-size: 18px;
+    position: fixed;
+    align-items: center; /* Center horizontally */
+    bottom:0;
+    left:50%;
+    margin-bottom: 20px; /* Add margin to separate the checkbox from the button */
+    transform: translate(-50%, -50%);
+}
+#fakeButton {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Makes the button circular */
+    background-color: red; /* Set your desired background color */
     color: white; /* Set your desired text color */
     border: none;
     display: none;
@@ -25,6 +46,15 @@
     position: sticky;
     top: 0; 
 }
+
+#colorText {
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    position: sticky;
+    top: 0; 
+    z-index: 3;
+}
 #start {
     position: fixed;
     width: 500px;
@@ -37,9 +67,21 @@
     color: white; /* Set your desired text color */
     border: none;
 }
+
+#restart {
+    position: fixed;
+    padding: 10% 10% 10% 10%;
+    left:50%;
+    transform: translate(-50%, 0);
+    border-radius: 100px; /* Makes the button circular */
+    background-color: green; /* Set your desired background color */
+    color: white; /* Set your desired text color */
+    border: none;
+}
 #winScreen {
     background-color: red;
     position: fixed;
+    font-size: 20px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
