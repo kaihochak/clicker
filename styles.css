@@ -8,6 +8,23 @@
     border: none;
     display: none;
 }
+#game {
+    display: none;
+}
+#timer {
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    position: sticky;
+    top: 0; 
+}
+#gameplayAverage {
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    position: sticky;
+    top: 0; 
+}
 #start {
     position: fixed;
     width: 500px;
