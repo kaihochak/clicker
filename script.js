@@ -20,12 +20,12 @@ let seconds = 0.0;
 let clickCount = 0;
 
 const colors = ["#7CB4CF", "#CB98C3", "#FAC7CB", "#5A672D", "#E25F26", "#FEB519"];
-const animalpics=["bear", "cat", "cheeta", "deer", "elephant", "fox", "hippo", "koala", "lama", "lion", "monkey", "panda", "pig","sheep","sloth", "tiger", "wolf","zebra"];
+const animalpics=["bear", "cat", "cheeta", "deer", "elephant", "fox", "hippo", "koala", "lama", "lion", "monkey", "panda", "pig","sheep","sloth", "tiger", "raccoon","zebra"];
 
 
 function getRandomPosition() {
     const maxX = window.innerWidth - button.clientWidth;
-    const maxY = window.innerHeight - button.clientHeight;
+    const maxY = window.innerHeight - button.clientHeight + 50;
 
     const randomX = Math.floor(Math.random() * maxX);
     const randomY = Math.floor(Math.random() * maxY);
@@ -45,6 +45,10 @@ function getRandomPosition() {
 
 function newRandomIndex(){
     return Math.floor(Math.random() * colors.length);
+}
+
+function newAnimalIndex(){
+    return Math.floor(Math.random() * animalpics.length);
 }
 
 function startGame() {
@@ -92,8 +96,15 @@ function startGame() {
         }
 
         if(animalGame){
-            const animalPic = Math.floor(Math.random() * animalpics.length);
+            const animalPic = newAnimalIndex();
             button.innerHTML = `<img id = "animalpics" src = "animals/${animalpics[animalPic]}.png">`
+            colorText.textContent = `click ${animalpics[animalPic].toUpperCase()}`
+            
+            let fakerandomIndex = newAnimalIndex();
+            while(fakerandomIndex == animalPic){
+                fakerandomIndex = animalPic();
+            }
+            fakeButton.innerHTML = `<img id = "animalpics" src = "animals/${animalpics[fakerandomIndex]}.png"></img>`
         }
 
         const randomPosition = getRandomPosition();
@@ -142,6 +153,15 @@ function addFakeButton() {
     colorText.style.display = 'block';
 }
 
+function addAnimals() {
+    animalGame = true;
+    fakeButton.style.display = 'block';
+    colorText.style.display = 'block';
+
+    button.style.backgroundColor = 'black';
+    fakeButton.style.backgroundColor = 'black';
+}
+
 function removeFakeButton() {
     colorGame = false;
     fakeButton.style.display = 'none';
@@ -173,6 +193,7 @@ colorStartbutton.addEventListener('click', () => {
 
     animalGame = false;
     button.innerHTML = ''
+    fakeButton.innerHTML = ''
 
     clickCount = 0;
     addFakeButton();
@@ -185,9 +206,10 @@ animalStartbutton.addEventListener('click', () => {
     gameElement.style.display = 'block';
     titleHeader.style.display ='none';
     button.style.display= 'block';
-    animalGame = true;
     clickCount = 0;
     removeFakeButton();
+    addAnimals();
+    button.style.backgroundColor = "black";
     startTimer();
     startGame();
 });
