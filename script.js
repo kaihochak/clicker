@@ -12,6 +12,7 @@ const colorStartbutton = document.getElementById('colorStart');
 const animalStartbutton = document.getElementById('animalStart');
 const startButtons = document.getElementById('checkboxContainer');
 const colorText = document.getElementById('colorText');
+const exitButton = document.getElementById('exit');
 let colorGame = false;
 let animalGame = false;
 let timerInterval;
@@ -229,3 +230,8 @@ restart.addEventListener('click', () => {
     winScreen.style.display = 'none';
 });
 
+exitButton.addEventListener('click', () => {
+    titleHeader.style.display ='flex';
+    gameElement.style.display = 'none';
+    stopTimer();
+});
