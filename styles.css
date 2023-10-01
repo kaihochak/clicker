@@ -1,5 +1,10 @@
 body {
     background-color: #F3ECE5 ;
+    font-family:testfont;
+}
+@font-face {
+    font-family: testfont;
+    src: url("AmericanCaptain-MdEY.otf") format("opentype");
 }
 #randomButton {
     position: absolute;
@@ -64,6 +69,8 @@ body {
     left:50%;
     transform: translate(-50%, -50%);
     border-radius: 100px; /* Makes the button circular */
+    font-size: 100px;
+    font-family:testfont;
     background-color: green; /* Set your desired background color */
     color: white; /* Set your desired text color */
     border: none;
@@ -71,6 +78,7 @@ body {
 
 #restart {
     position: fixed;
+    font-family:testfont;
     padding: 10% 10% 10% 10%;
     left:50%;
     transform: translate(-50%, 0);
