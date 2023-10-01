@@ -11,11 +11,20 @@ body {
     width: 250px;
     height: 250px;
     border-radius: 50%; /* Makes the button circular */
-    background-color: blue; /* Set your desired background color */
+    background-color: black; /* Set your desired background color */
     color: white; /* Set your desired text color */
     border: none;
     display: none;
 }
+#titleHeader {
+    font-size: 120px;
+    position: fixed;
+    align-items: center; /* Center horizontally */
+    left:50%;
+    transform: translate(-50%, 0);
+    display:block;
+}
+
 #checkboxContainer {
     font-size: 18px;
     position: fixed;
@@ -62,18 +71,41 @@ body {
     z-index: 3;
 }
 #start {
-    position: fixed;
-    width: 500px;
-    height: 200px;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 120px;
     border-radius: 100px; /* Makes the button circular */
-    font-size: 100px;
+    font-size: 50px;
     font-family:testfont;
     background-color: green; /* Set your desired background color */
-    color: white; /* Set your desired text color */
+    color: #F3ECE5; /* Set your desired text color */
     border: none;
+    margin-bottom: 4%;
+    display: inherit;
+}
+#colorStart {
+    width: 300px;
+    height: 120px;
+    border-radius: 100px; /* Makes the button circular */
+    font-size: 49px;
+    font-family:testfont;
+    background-color: green; /* Set your desired background color */
+    color: #F3ECE5; /* Set your desired text color */
+    border: none;
+    margin-bottom: 4%;
+    display: inherit;
+}
+
+#animalStart {
+    width: 300px;
+    height: 120px;
+    border-radius: 100px; /* Makes the button circular */
+    font-size: 45px;
+    font-family:testfont;
+    background-color: green; /* Set your desired background color */
+    color: #F3ECE5; /* Set your desired text color */
+    border: none;
+    margin-bottom: 4%;
+    display: inherit;
 }
 
 #restart {

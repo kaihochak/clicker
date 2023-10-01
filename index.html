@@ -3,27 +3,33 @@
 <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+<title> the CLICKER game </title>
 <body>
     <div id="background">
-    <button id="start">START</button>
-    <div id="checkboxContainer">
-        <input type="checkbox" id="FakeButtonCheckbox">
-        <label for="FakeButtonCheckbox">Play Colour Game</label>
-    </div>
-    <div id="game">
-        <button id="randomButton"></button>
-        <button id="fakeButton"></button>
-        <p id="timer">Time: 0 seconds</p>
-        <p id="gameplayAverage">0.342</p>
-        <p id="colorText"></p>
-    </div>
+        <div id="startScreen">
+        <p id="titleHeader"> the CLICKER game </p>
+        <div id="checkboxContainer">
+            
+            <button id="start">START BASIC GAME</button>
+            <button id="colorStart">START COLOR GAME</button>
+            <button id="animalStart">START ANIMAL GAME</button>
+        </div>
+        </div>
+        <div id="game">
+            <button id="randomButton"></button>
+            <button id="fakeButton"></button>
+            <p id="timer">Time: 0 seconds</p>
+            <p id="gameplayAverage">0.342</p>
+            <p id="colorText"></p>
+        </div>
     
-    <div id="winScreen">
-        <p id="totalTime">Total time:</p>
-        <p>Average time Between clicks</p>
-        <p id="time"></p>
-        <button id="restart">restart</button>
-    </div>
+        <div id="winScreen">
+            <p>Total time:</p>
+            <p id="totalTime"></p>
+            <p>Average time Between clicks</p>
+            <p id="time"></p>
+            <button id="restart">restart</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

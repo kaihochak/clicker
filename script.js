@@ -3,12 +3,13 @@ const gameplayAvg = document.getElementById('gameplayAverage');
 const restart = document.getElementById('restart');
 const avgtime = document.getElementById('time')
 const winScreen = document.getElementById('winScreen')
-const start = document.getElementById('start')
+const start = document.getElementById('start');
+const titleHeader = document.getElementById('startScreen')
 const timerElement = document.getElementById('timer');
 const total = document.getElementById('totalTime');
 const gameElement = document.getElementById('game');
-const addFakeButtonCheckbox = document.getElementById('FakeButtonCheckbox');
-const checkboxElement = document.getElementById('checkboxContainer')
+const colorStartbutton = document.getElementById('colorStart');
+const startButtons = document.getElementById('checkboxContainer');
 const colorText = document.getElementById('colorText');
 let colorGame = false;
 let timerInterval;
@@ -39,23 +40,25 @@ function getRandomPosition() {
     return { x: randomX, y: randomY };
 }
 
-function setRandomPosition() {
+function newRandomIndex(){
+    return Math.floor(Math.random() * colors.length);
+}
+
+function startGame() {
     if(clickCount < 10){
 
         rando = Math.random() * 0.4 + 0.125;
         gameplayAvg.textContent = `Average time: ${rando.toFixed(3)} seconds`;
-        
-        
 
         if(colorGame){
 
-            const randomIndex = Math.floor(Math.random() * colors.length);
+            const randomIndex = newRandomIndex();
             button.style.backgroundColor = colors[randomIndex];
             colorText.textContent = `click ${colors[randomIndex].toUpperCase()}`
 
-            let fakerandomIndex = Math.floor(Math.random() * colors.length);
+            let fakerandomIndex = newRandomIndex();
             while(fakerandomIndex == randomIndex){
-                fakerandomIndex = Math.floor(Math.random() * colors.length);
+                fakerandomIndex = newRandomIndex();
             }
             fakeButton.style.backgroundColor = colors[fakerandomIndex];
             button.style.backgroundColor = colors[randomIndex];
@@ -87,23 +90,25 @@ function setRandomPosition() {
         const randomPosition = getRandomPosition();
         button.style.left = `${randomPosition.x}px`;
         button.style.top = `${randomPosition.y}px`;
+
+        //loop until the buttons dont overlap
         while(true){
          fakerandomPosition = getRandomPosition();
          if(Math.abs(randomPosition.x - fakerandomPosition.x) >= 250 && Math.abs(randomPosition.y - fakerandomPosition.y) >= 250){
             break;
          }
         }
+
         fakeButton.style.left = `${fakerandomPosition.x}px`;
         fakeButton.style.top = `${fakerandomPosition.y}px`;
         clickCount++;
-        
     }
     else{
         button.style.display = 'none';
         winScreen.style.display = 'block';
         gameElement.style.display = 'none';
         stopTimer();
-        total.textContent = `Total time: ${seconds.toFixed(3)} seconds`;
+        total.textContent = `${seconds.toFixed(3)} seconds`;
         avgtime.textContent = `${rando.toFixed(3)} seconds`; 
     }
 }
@@ -123,32 +128,44 @@ function stopTimer() {
 
 
 function addFakeButton() {
+    colorGame = true;
     fakeButton.style.display = 'block';
     colorText.style.display = 'block';
 }
 
 function removeFakeButton() {
+    colorGame = false;
     fakeButton.style.display = 'none';
+    button.style.backgroundColor = 'black';
     colorText.style.display = 'none';
 }
 
-button.addEventListener('click', setRandomPosition);
+button.addEventListener('click', startGame);
 
 //Click Start button
 start.addEventListener('click', () => {
     gameElement.style.display = 'block';
-    checkboxElement.style.display ='none';
+    titleHeader.style.display ='none';
     button.style.display= 'block';
-    start.style.display = 'none';
     clickCount = 0;
+    removeFakeButton();
     startTimer();
-    setRandomPosition();
+    startGame();
+});
+
+colorStartbutton.addEventListener('click', () => {
+    gameElement.style.display = 'block';
+    titleHeader.style.display ='none';
+    button.style.display= 'block';
+    clickCount = 0;
+    addFakeButton();
+    startTimer();
+    startGame();
 });
 
 //Click restart button
 restart.addEventListener('click', () => {
-    start.style.display = 'block';
-    checkboxElement.style.display ='block';
+    titleHeader.style.display ='block';
     winScreen.style.display = 'none';
 });
 
