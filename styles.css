@@ -8,8 +8,8 @@ body {
 }
 #randomButton {
     position: absolute;
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%; /* Makes the button circular */
     background-color: #438186; /* Set your desired background color */
     color: #F3ECE5; /* Set your desired text color */
@@ -17,10 +17,23 @@ body {
     display: none;
 }
 
+#animalpics {
+    width: inherit;
+    height: inherit;
+}
+#titleHeader {
+    font-size: 120px;
+    position: fixed;
+    align-items: center; /* Center horizontally */
+    left:50%;
+    transform: translate(-50%, 0);
+    display:block;
+}
+
 #fakeButton {
     position: absolute;
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%; /* Makes the button circular */
     background-color: red; /* Set your desired background color */
     color: #F3ECE5; /* Set your desired text color */
