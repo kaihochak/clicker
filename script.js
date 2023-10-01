@@ -187,6 +187,7 @@ animalStartbutton.addEventListener('click', () => {
     button.style.display= 'block';
     animalGame = true;
     clickCount = 0;
+    removeFakeButton();
     startTimer();
     startGame();
 });
