@@ -165,7 +165,7 @@ colorStartbutton.addEventListener('click', () => {
 
 //Click restart button
 restart.addEventListener('click', () => {
-    titleHeader.style.display ='block';
+    titleHeader.style.display ='flex';
     winScreen.style.display = 'none';
 });
 
