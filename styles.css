@@ -1,6 +1,6 @@
 body {
-    background-color: #F3ECE5 ;
-    font-family:testfont;
+    background-color: #F3ECE5;
+    font-family: testfont;
 }
 @font-face {
     font-family: testfont;
@@ -11,8 +11,8 @@ body {
     width: 220px;
     height: 220px;
     border-radius: 50%; /* Makes the button circular */
-    background-color: black; /* Set your desired background color */
-    color: white; /* Set your desired text color */
+    background-color: #438186; /* Set your desired background color */
+    color: #F3ECE5; /* Set your desired text color */
     border: none;
     display: none;
 }
@@ -30,38 +30,32 @@ body {
     display:block;
 }
 
-#checkboxContainer {
-    font-size: 18px;
-    position: fixed;
-    align-items: center; /* Center horizontally */
-    bottom:0;
-    left:50%;
-    margin-bottom: 20px; /* Add margin to separate the checkbox from the button */
-    transform: translate(-50%, -50%);
-}
 #fakeButton {
     position: absolute;
     width: 220px;
     height: 220px;
     border-radius: 50%; /* Makes the button circular */
-    background-color: black; /* Set your desired background color */
-    color: white; /* Set your desired text color */
+    background-color: red; /* Set your desired background color */
+    color: #F3ECE5; /* Set your desired text color */
     border: none;
     display: none;
 }
+
 #game {
     display: none;
 }
+
 #timer {
     font-size: 18px;
-    color: black;
+    color: #438186;
     text-align: center;
     position: sticky;
     top: 0; 
 }
+
 #gameplayAverage {
     font-size: 18px;
-    color: black;
+    color: #438186;
     text-align: center;
     position: sticky;
     top: 0; 
@@ -69,48 +63,11 @@ body {
 
 #colorText {
     font-size: 18px;
-    color: black;
+    color: #438186;
     text-align: center;
     position: sticky;
     top: 0; 
     z-index: 3;
-}
-#start {
-    width: 300px;
-    height: 120px;
-    border-radius: 100px; /* Makes the button circular */
-    font-size: 50px;
-    font-family:testfont;
-    background-color: green; /* Set your desired background color */
-    color: #F3ECE5; /* Set your desired text color */
-    border: none;
-    margin-bottom: 4%;
-    display: inherit;
-}
-#colorStart {
-    width: 300px;
-    height: 120px;
-    border-radius: 100px; /* Makes the button circular */
-    font-size: 49px;
-    font-family:testfont;
-    background-color: green; /* Set your desired background color */
-    color: #F3ECE5; /* Set your desired text color */
-    border: none;
-    margin-bottom: 4%;
-    display: inherit;
-}
-
-#animalStart {
-    width: 300px;
-    height: 120px;
-    border-radius: 100px; /* Makes the button circular */
-    font-size: 45px;
-    font-family:testfont;
-    background-color: green; /* Set your desired background color */
-    color: #F3ECE5; /* Set your desired text color */
-    border: none;
-    margin-bottom: 4%;
-    display: inherit;
 }
 
 #restart {
@@ -120,8 +77,8 @@ body {
     left:50%;
     transform: translate(-50%, 0);
     border-radius: 100px; /* Makes the button circular */
-    background-color: green; /* Set your desired background color */
-    color: white; /* Set your desired text color */
+    background-color: #F3ECE5; /* Set your desired background color */
+    color: #F3ECE5; /* Set your desired text color */
     border: none;
 }
 #winScreen {
