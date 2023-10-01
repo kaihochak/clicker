@@ -42,7 +42,8 @@ body {
 }
 
 #game {
-    display: none;
+    display: flex;
+    /* display: none; */
 }
 
 #timer {
@@ -81,6 +82,7 @@ body {
     color: #F3ECE5; /* Set your desired text color */
     border: none;
 }
+
 #winScreen {
     background-color: #7CB4CF;
     position: fixed;

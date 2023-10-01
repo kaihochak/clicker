@@ -98,7 +98,7 @@ function startGame() {
             }
         }
 
-
+        // specifically for animal game
         if(animalGame){
             const animalPic = newAnimalIndex();
             button.innerHTML = `<img id = "animalpics" src = "animals/${animalpics[animalPic]}.png">`
@@ -111,6 +111,7 @@ function startGame() {
             fakeButton.innerHTML = `<img id = "animalpics" src = "animals/${animalpics[fakerandomIndex]}.png"></img>`
         }
 
+        // randomize button position
         const randomPosition = getRandomPosition();
         button.style.left = `${randomPosition.x}px`;
         button.style.top = `${randomPosition.y}px`;
@@ -123,6 +124,7 @@ function startGame() {
          }
         }
 
+        // randomize fake button position
         fakeButton.style.left = `${fakerandomPosition.x}px`;
         fakeButton.style.top = `${fakerandomPosition.y}px`;
         clickCount++;
@@ -170,15 +172,16 @@ function addAnimals() {
 function removeFakeButton() {
     colorGame = false;
     fakeButton.style.display = 'none';
-    button.style.backgroundColor = 'black';
     colorText.style.display = 'none';
 }
 
 button.addEventListener('click', startGame);
 
-//Click Start button
+// Click Basic Game button
 start.addEventListener('click', () => {
-    gameElement.style.display = 'block';
+
+    button.style.backgroundColor = '#438186';
+    gameElement.style.display = 'flex';
     titleHeader.style.display ='none';
     button.style.display= 'block';
 
@@ -191,8 +194,9 @@ start.addEventListener('click', () => {
     startGame();
 });
 
+// Click color start button
 colorStartbutton.addEventListener('click', () => {
-    gameElement.style.display = 'block';
+    gameElement.style.display = 'flex';
     titleHeader.style.display ='none';
     button.style.display= 'block';
 
@@ -206,9 +210,9 @@ colorStartbutton.addEventListener('click', () => {
     startGame();
 });
 
-
+// Click animal start button
 animalStartbutton.addEventListener('click', () => {
-    gameElement.style.display = 'block';
+    gameElement.style.display = 'flex';
     titleHeader.style.display ='none';
     button.style.display= 'block';
     clickCount = 0;
@@ -218,6 +222,7 @@ animalStartbutton.addEventListener('click', () => {
     startTimer();
     startGame();
 });
+
 //Click restart button
 restart.addEventListener('click', () => {
     titleHeader.style.display ='flex';
