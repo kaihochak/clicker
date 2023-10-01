@@ -1,4 +1,6 @@
-
+body {
+    background-color: #F3ECE5 ;
+}
 #randomButton {
     position: absolute;
     width: 250px;
@@ -6,7 +8,6 @@
     border-radius: 50%; /* Makes the button circular */
     background-color: blue; /* Set your desired background color */
     color: white; /* Set your desired text color */
-    z-index: 2;
     border: none;
     display: none;
 }
@@ -79,7 +80,7 @@
     border: none;
 }
 #winScreen {
-    background-color: red;
+    background-color: #7CB4CF;
     position: fixed;
     font-size: 20px;
     top: 50%;

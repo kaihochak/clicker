@@ -16,8 +16,18 @@ let rando = 0;
 let seconds = 0.0;
 let clickCount = 0;
 
-const colors = ["red", "green", "blue", "yellow", "pink", "purple", "orange"];
+const colors = ["#7CB4CF", "#CB98C3", "#FAC7CB", "#5A672D", "#E25F26", "#FEB519"];
 
+
+function getRandomPosition() {
+    const maxX = window.innerWidth - button.clientWidth;
+    const maxY = window.innerHeight - button.clientHeight;
+
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * maxY);
+
+    return { x: randomX, y: randomY };
+}
 
 function getRandomPosition() {
     const maxX = window.innerWidth - button.clientWidth;
@@ -35,7 +45,7 @@ function setRandomPosition() {
         rando = Math.random() * 0.4 + 0.125;
         gameplayAvg.textContent = `Average time: ${rando.toFixed(3)} seconds`;
         
-        const randomPosition = getRandomPosition();
+        
 
         if(colorGame){
 
@@ -49,12 +59,40 @@ function setRandomPosition() {
             }
             fakeButton.style.backgroundColor = colors[fakerandomIndex];
             button.style.backgroundColor = colors[randomIndex];
-            colorText.textContent = `click ${colors[randomIndex].toUpperCase()}`
-        }
+            
+            switch (randomIndex) {
+                case 0:
+                    colorText.textContent = `click BLUE`
+                    break;
+                case 1:
+                    colorText.textContent = `click PURPLE`
+                    break;
+                case 2:
+                    colorText.textContent = `click PINK`
+                    break;
+                case 3:
+                    colorText.textContent = `click GREEN`
+                    break;
+                case 4:
+                    colorText.textContent = `click ORANGE`
+                    break;
+                case 5:
+                    colorText.textContent = `click YELLOW`
+                    break;
 
+                default:
+                    break;
+            }
+        }
+        const randomPosition = getRandomPosition();
         button.style.left = `${randomPosition.x}px`;
         button.style.top = `${randomPosition.y}px`;
-        const fakerandomPosition = getRandomPosition();
+        while(true){
+         fakerandomPosition = getRandomPosition();
+         if(Math.abs(randomPosition.x - fakerandomPosition.x) >= 250 && Math.abs(randomPosition.y - fakerandomPosition.y) >= 250){
+            break;
+         }
+        }
         fakeButton.style.left = `${fakerandomPosition.x}px`;
         fakeButton.style.top = `${fakerandomPosition.y}px`;
         clickCount++;
@@ -69,6 +107,7 @@ function setRandomPosition() {
         avgtime.textContent = `${rando.toFixed(3)} seconds`; 
     }
 }
+
 function startTimer() {
     timerElement.textContent = `Time: 0 seconds`;
     seconds = 0.0;
