@@ -19,7 +19,6 @@ let clickCount = 0;
 
 const colors = ["#7CB4CF", "#CB98C3", "#FAC7CB", "#5A672D", "#E25F26", "#FEB519"];
 
-
 function getRandomPosition() {
     const maxX = window.innerWidth - button.clientWidth;
     const maxY = window.innerHeight - button.clientHeight;
@@ -44,12 +43,17 @@ function newRandomIndex(){
     return Math.floor(Math.random() * colors.length);
 }
 
+
 function startGame() {
+
+    // during
     if(clickCount < 10){
 
+        // dummy result genration
         rando = Math.random() * 0.4 + 0.125;
         gameplayAvg.textContent = `Average time: ${rando.toFixed(3)} seconds`;
 
+        // specifically for color game
         if(colorGame){
 
             const randomIndex = newRandomIndex();
@@ -87,6 +91,7 @@ function startGame() {
                     break;
             }
         }
+
         const randomPosition = getRandomPosition();
         button.style.left = `${randomPosition.x}px`;
         button.style.top = `${randomPosition.y}px`;
@@ -103,6 +108,7 @@ function startGame() {
         fakeButton.style.top = `${fakerandomPosition.y}px`;
         clickCount++;
     }
+    // game over
     else{
         button.style.display = 'none';
         winScreen.style.display = 'block';
