@@ -9,15 +9,18 @@ const timerElement = document.getElementById('timer');
 const total = document.getElementById('totalTime');
 const gameElement = document.getElementById('game');
 const colorStartbutton = document.getElementById('colorStart');
+const animalStartbutton = document.getElementById('animalStart');
 const startButtons = document.getElementById('checkboxContainer');
 const colorText = document.getElementById('colorText');
 let colorGame = false;
+let animalGame = false;
 let timerInterval;
 let rando = 0;
 let seconds = 0.0;
 let clickCount = 0;
 
 const colors = ["#7CB4CF", "#CB98C3", "#FAC7CB", "#5A672D", "#E25F26", "#FEB519"];
+const animalpics=["bear", "cat", "cheeta", "deer", "elephant", "fox", "hippo", "koala", "lama", "lion", "monkey", "panda", "pig","sheep","sloth", "tiger", "wolf","zebra"];
 
 
 function getRandomPosition() {
@@ -87,6 +90,12 @@ function startGame() {
                     break;
             }
         }
+
+        if(animalGame){
+            const animalPic = Math.floor(Math.random() * animalpics.length);
+            button.innerHTML = `<img id = "animalpics" src = "animals/${animalpics[animalPic]}.png">`
+        }
+
         const randomPosition = getRandomPosition();
         button.style.left = `${randomPosition.x}px`;
         button.style.top = `${randomPosition.y}px`;
@@ -147,6 +156,10 @@ start.addEventListener('click', () => {
     gameElement.style.display = 'block';
     titleHeader.style.display ='none';
     button.style.display= 'block';
+
+    animalGame =false;
+    button.innerHTML = ''
+
     clickCount = 0;
     removeFakeButton();
     startTimer();
@@ -157,25 +170,29 @@ colorStartbutton.addEventListener('click', () => {
     gameElement.style.display = 'block';
     titleHeader.style.display ='none';
     button.style.display= 'block';
+
+    animalGame = false;
+    button.innerHTML = ''
+
     clickCount = 0;
     addFakeButton();
     startTimer();
     startGame();
 });
 
+
+animalStartbutton.addEventListener('click', () => {
+    gameElement.style.display = 'block';
+    titleHeader.style.display ='none';
+    button.style.display= 'block';
+    animalGame = true;
+    clickCount = 0;
+    startTimer();
+    startGame();
+});
 //Click restart button
 restart.addEventListener('click', () => {
     titleHeader.style.display ='block';
     winScreen.style.display = 'none';
 });
 
-addFakeButtonCheckbox.addEventListener('change', () => {
-    if (addFakeButtonCheckbox.checked) {
-        addFakeButton();
-        colorGame = true;
-
-    } else {
-        removeFakeButton();
-        colorGame = false;
-    }
-});
