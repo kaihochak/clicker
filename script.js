@@ -123,7 +123,7 @@ function startGame() {
             }
         }
         // specifically for animal game
-        else if(animalGame){
+        if(animalGame){
             const animalPic = newAnimalIndex();
             button.innerHTML = `<img id = "animalpics" src = "animals/${animalpics[animalPic]}.png">`
             colorText.textContent = `click ${animalpics[animalPic].toUpperCase()}`
@@ -138,7 +138,7 @@ function startGame() {
             button.style.backgroundColor = 'none';
         }
         // specifically for vegetable game
-        else if(vegetableGame){
+        if(vegetableGame){
             const vegetablePic = newVegetableIndex();
             button.innerHTML = `<img id = "vegetablepics" src = "vegetables/${vegetablepics[vegetablePic]}.png">`
             colorText.textContent = `click ${vegetablepics[vegetablePic].toUpperCase()}`
@@ -153,7 +153,7 @@ function startGame() {
             button.style.backgroundColor = 'none';
         }
         // specifically for mood game
-        else if(moodGame){
+        if(moodGame){
             const moodPic = newMoodIndex();
             button.innerHTML = `<img id = "moodpics" src = "mood/${moodpics[moodPic]}.png">`
             colorText.textContent = `click ${moodpics[moodPic].toUpperCase()}`
