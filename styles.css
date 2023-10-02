@@ -23,8 +23,13 @@ body {
     color: #F3ECE5; 
     border: none;
     display: none;
+    transition: background-color 0.3s, transform 0.1s;
 }
 
+/* Add a click effect */
+#randomButton:active {
+    transform: scale(0.75);
+}
 #animalpics {
     width: inherit;
     height: inherit;
@@ -41,6 +46,26 @@ body {
     color: #F3ECE5; 
     border: none;
     display: none;
+}
+
+/* Define the keyframes for the vibration effect */
+@keyframes vibration {
+    0% { transform: translate(0, 0); }
+    10% { transform: translate(-2px, -2px); }
+    20% { transform: translate(2px, 2px); }
+    30% { transform: translate(-2px, -2px); }
+    40% { transform: translate(2px, 2px); }
+    50% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    70% { transform: translate(-2px, -2px); }
+    80% { transform: translate(2px, 2px); }
+    90% { transform: translate(-2px, -2px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Apply the vibration animation to the button when clicked */
+#fakeButton:active {
+    animation: vibration 0.3s ease infinite; /* Adjust the duration and easing as needed */
 }
 
 #game {
