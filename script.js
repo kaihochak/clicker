@@ -202,6 +202,7 @@ function startGame() {
     }
 }
 
+// functions for timer
 function startTimer() {
     timerElement.textContent = `Time: 0 seconds`;
     seconds = 0.0;
@@ -215,7 +216,7 @@ function stopTimer() {
     clearInterval(timerInterval);
 }
 
-
+// fake button for other modes
 function addFakeButton() {
     colorGame = true;
     fakeButton.style.display = 'block';

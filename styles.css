@@ -15,12 +15,12 @@ body {
 
 #randomButton {
     position: absolute;
+    background-color: transparent; 
     z-index: 3;
     width: 220px;
     height: 220px;
-    border-radius: 50%; /* Makes the button circular */
-    background-color: transparent; /* Set your desired background color */
-    color: #F3ECE5; /* Set your desired text color */
+    border-radius: 50%;
+    color: #F3ECE5; 
     border: none;
     display: none;
 }
@@ -32,11 +32,13 @@ body {
 
 #fakeButton {
     position: absolute;
+    opacity: 0.8;
+    background-color: transparent;
+    z-index: 3;
     width: 220px;
     height: 220px;
-    border-radius: 50%; /* Makes the button circular */
-    background-color: transparent; /* Set your desired background color */
-    color: #F3ECE5; /* Set your desired text color */
+    border-radius: 50%; 
+    color: #F3ECE5; 
     border: none;
     display: none;
 }
