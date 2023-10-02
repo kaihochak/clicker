@@ -20,7 +20,9 @@ Getting started with The Clicker Game is a breeze. Follow these simple steps to 
 
 ## Game Modes
 
-### 1. Normal Mode
+![Starting Screen](gameplay/start.png)
+
+### 1. Basic Mode
 
 - **Objective:** Click the circle as fast as possible.
 - **Gameplay:** Click the circle to register a click. The game ends after 10 clicks.
@@ -29,7 +31,7 @@ Getting started with The Clicker Game is a breeze. Follow these simple steps to 
   - An average time in seconds between clicks.
   - The ability to end the game and return to the home screen.
 
-![Normal Mode](gameplay/start.png)
+![Basic Mode](gameplay/basic.png)
 
 ### 2. Color Mode
 
@@ -39,7 +41,7 @@ Getting started with The Clicker Game is a breeze. Follow these simple steps to 
   - Colorful and engaging visuals.
   - Exciting color-based challenges.
 
-![Color Mode](images/color_mode.png)
+![Color Mode](gameplay/color.png)
 
 ### 3. Animal Mode
 
@@ -49,7 +51,7 @@ Getting started with The Clicker Game is a breeze. Follow these simple steps to 
   - A wide variety of adorable animal images.
   - Educational and entertaining gameplay.
 
-![Animal Mode](images/animal_mode.png)
+![Animal Mode](gameplay/animal.png)
 
 ### 4. Mood Mode
 
@@ -59,7 +61,7 @@ Getting started with The Clicker Game is a breeze. Follow these simple steps to 
   - Engaging visuals depicting different moods.
   - An entertaining and emotionally stimulating experience.
 
-![Mood Mode](images/mood_mode.png)
+![Mood Mode](gameplay/mood.png)
 
 ### 5. Vegetable Mode
 
@@ -69,10 +71,12 @@ Getting started with The Clicker Game is a breeze. Follow these simple steps to 
   - Fun and educational gameplay focused on vegetables.
   - A chance to expand your knowledge about healthy foods.
 
-![Vegetable Mode](images/vegetable_mode.png)
+![Vegetable Mode](gameplay/veggie.png)
 
 ## End Screen
 
 After completing each mode, you'll see your results, allowing you to track your progress and strive for improvement. From here, you can easily restart the game or return to the home screen to explore other modes.
+
+![End Screen Mode](gameplay/winScreen.png)
 
 Get ready to have a blast, improve your coordination, and learn new things with The Clicker Game!
