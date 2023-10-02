@@ -29,7 +29,7 @@ Getting started with The Clicker Game is a breeze. Follow these simple steps to 
   - An average time in seconds between clicks.
   - The ability to end the game and return to the home screen.
 
-![Normal Mode](images/normal_mode.png)
+![Normal Mode](images/start.png)
 
 ### 2. Color Mode
 
