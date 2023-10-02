@@ -2,16 +2,18 @@ body {
     background-color: #F3ECE5;
     font-family: testfont;
 }
+
 @font-face {
     font-family: testfont;
     src: url("AmericanCaptain-MdEY.otf") format("opentype");
 }
+
 #randomButton {
     position: absolute;
+    z-index: 3;
     width: 220px;
     height: 220px;
     border-radius: 50%; /* Makes the button circular */
-    background-color: #438186; /* Set your desired background color */
     color: #F3ECE5; /* Set your desired text color */
     border: none;
     display: none;
@@ -21,6 +23,7 @@ body {
     width: inherit;
     height: inherit;
 }
+
 #titleHeader {
     font-size: 120px;
     position: fixed;
@@ -42,32 +45,23 @@ body {
 }
 
 #game {
-    display: flex;
-    /* display: none; */
+    display: none;
 }
 
 #timer {
-    font-size: 18px;
     color: #438186;
     text-align: center;
     position: sticky;
-    top: 0; 
 }
 
 #gameplayAverage {
-    font-size: 18px;
-    color: #438186;
     text-align: center;
     position: sticky;
-    top: 0; 
 }
 
 #colorText {
-    font-size: 18px;
-    color: #438186;
     text-align: center;
     position: sticky;
-    top: 0; 
     z-index: 3;
 }
 
