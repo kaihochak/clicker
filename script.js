@@ -1,3 +1,5 @@
+
+const body = document.querySelector('body');
 const button = document.getElementById('randomButton');
 const gameplayAvg = document.getElementById('gameplayAverage');
 const restart = document.getElementById('restart');
@@ -68,6 +70,9 @@ function newMoodIndex(){
 }
 
 function startGame() {
+
+    // change background back to plain
+    body.style.backgroundImage = 'none';
 
     // during
     if(clickCount < 10){
@@ -184,7 +189,11 @@ function startGame() {
 
     // game over
     else{
+        // hide button
         button.style.display = 'none';
+
+        // show win screen
+        body.style.backgroundImage = 'url("edited-watercolor-rainbow-background.jpg")';
         winScreen.style.display = 'flex';
         gameElement.style.display = 'none';
         stopTimer();
@@ -333,8 +342,15 @@ restart.addEventListener('click', () => {
 
 // exit button
 exitButton.addEventListener('click', () => {
+    
+    // reset start page
     titleHeader.style.display ='flex';
+    body.style.backgroundImage = 'url("edited-watercolor-rainbow-background.jpg")';
+
+    // close game page
     gameElement.style.display = 'none';
+
+    // stop timer
     stopTimer();
 });
 

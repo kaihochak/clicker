@@ -11,7 +11,7 @@
 
 <body>
     <!-- Start -->
-    <div id="background">
+    <div id="background" class="min-h-screen">
         <div id="startScreen" class="flex flex-col justify-center">
 
             <!-- Title -->
@@ -102,37 +102,41 @@
         </div>
 
         <!-- Winning Screen -->
-        <div id="winScreen" class="flex flex-col justify-center bg-[#438186]">
+        <div id="winScreen" class="flex flex-col justify-between bg-[#438186]">
             
             <!-- Total Time -->
-            <p 
-                class="text-[#F3ECE5] text-center tracking-widest drop-shadow-2xl 
-                    pt-20 pb-10 px-10 font-light text-[60px] 
-                    sm:pt-10 sm:pb-5 sm:font-bold sm:text-[80px]">
-                Total time
-            </p>
-            <p 
-                id="totalTime"
-                class="text-[#F3ECE5] text-center tracking-widest drop-shadow-2xl 
-                    pt-20 pb-10 px-10 font-extralight text-[60px] 
-                    sm:pb-5 sm:font-light sm:text-[65px]">
-                90
-            </p>
+            <div class="">
+                <p 
+                    class="text-[#F3ECE5] text-center tracking-widest drop-shadow-2xl 
+                        pt-6 pb-2 font-normal text-[60px] 
+                        sm:pt-7 sm:pb-5 sm:font-bold sm:text-[80px]">
+                    Total time
+                </p>
+                <p 
+                    id="totalTime"
+                    class="text-[#F3ECE5] text-center tracking-widest drop-shadow-2xl 
+                        pb-2 px-10 font-extralight text-[25px] 
+                        sm:pb-5 sm:font-light sm:text-[45px]">
+                        90
+                </p>
+            </div>
 
             <!-- Average Time -->
-            <p
-                class="text-[#F3ECE5] text-center tracking-widest drop-shadow-2xl 
-                    px-30 pt-20 pb-10 px-10 font-light text-[60px] 
-                    sm:px-50 sm:pt-10 sm:px-20 sm:font-bold sm:text-[65px]">
-                Average time Between clicks
-            </p>
-            <p 
-                id="time"
-                class="text-[#F3ECE5] text-center tracking-widest drop-shadow-2xl 
-                    pt-20 pb-10 px-10 font-light text-[60px] 
-                    sm:pt-0 sm:pb-0 sm:font-light sm:text-[50px]">
-                100
-            </p>
+            <div>
+                <p
+                    class="text-[#F3ECE5] text-center tracking-widest drop-shadow-2xl 
+                        px-30 pb-10 px-10 font-light text-[20px] 
+                        sm:px-20 sm:font-bold sm:text-[45px]">
+                    Average time Between clicks
+                </p>
+                <p 
+                    id="time"
+                    class="text-[#F3ECE5] text-center tracking-widest drop-shadow-2xl 
+                        pb-6 font-extralight text-[20px] 
+                        sm:pb-10 sm:font-light sm:text-[35px]">
+                    100
+                </p>
+            </div>
 
             <!-- restart -->
             <button id="restart"
@@ -144,8 +148,10 @@
                 restart
             </button>
         </div>
+    </div>
+    
 
-        <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
