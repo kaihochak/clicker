@@ -15,6 +15,8 @@ const moodStartbutton = document.getElementById('moodStart');
 const startButtons = document.getElementById('checkboxContainer');
 const colorText = document.getElementById('colorText');
 const exitButton = document.getElementById('exit');
+const wrongIndicator = document.getElementById('wrongIndicator');
+
 let colorGame = false;
 let animalGame = false;
 let vegetableGame = false;
@@ -73,6 +75,9 @@ function startGame() {
         // dummy result genration
         rando = Math.random() * 0.4 + 0.125;
         gameplayAvg.textContent = `Average time: ${rando.toFixed(3)} seconds`;
+
+        // hide wrong indicator
+        wrongIndicator.style.display = 'none';
 
         // specifically for color game
         if(colorGame){
@@ -248,7 +253,8 @@ button.addEventListener('click', startGame);
 // Click Basic Game button
 start.addEventListener('click', () => {
 
-    button.style.backgroundColor = '#438186';
+    button.style.backgroundColor = '#d64b41';
+    button.style.opacity = 0.8;
     gameElement.style.display = 'flex';
     titleHeader.style.display ='none';
     button.style.display= 'block';
@@ -321,14 +327,23 @@ moodStartbutton.addEventListener('click', () => {
     startGame();
 });
 
-//Click restart button
+// Click restart button
 restart.addEventListener('click', () => {
     titleHeader.style.display ='flex';
     winScreen.style.display = 'none';
 });
 
+// exit button
 exitButton.addEventListener('click', () => {
     titleHeader.style.display ='flex';
     gameElement.style.display = 'none';
     stopTimer();
+});
+
+// fake button click
+fakeButton.addEventListener('click', () => {
+    wrongIndicator.style.display = 'flex';
+    setTimeout(() => {
+        wrongIndicator.style.display = 'none';
+    }, 500);
 });
