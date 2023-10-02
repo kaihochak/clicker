@@ -14,6 +14,7 @@ body {
     width: 220px;
     height: 220px;
     border-radius: 50%; /* Makes the button circular */
+    background-color: transparent; /* Set your desired background color */
     color: #F3ECE5; /* Set your desired text color */
     border: none;
     display: none;
@@ -38,7 +39,7 @@ body {
     width: 220px;
     height: 220px;
     border-radius: 50%; /* Makes the button circular */
-    background-color: red; /* Set your desired background color */
+    background-color: transparent; /* Set your desired background color */
     color: #F3ECE5; /* Set your desired text color */
     border: none;
     display: none;
