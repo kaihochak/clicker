@@ -10,11 +10,15 @@ const total = document.getElementById('totalTime');
 const gameElement = document.getElementById('game');
 const colorStartbutton = document.getElementById('colorStart');
 const animalStartbutton = document.getElementById('animalStart');
+const vegetableStartbutton = document.getElementById('vegetableStart');
+const moodStartbutton = document.getElementById('moodStart');
 const startButtons = document.getElementById('checkboxContainer');
 const colorText = document.getElementById('colorText');
 const exitButton = document.getElementById('exit');
 let colorGame = false;
 let animalGame = false;
+let vegetableGame = false;
+let moodGame = false;
 let timerInterval;
 let rando = 0;
 let seconds = 0.0;
@@ -22,6 +26,8 @@ let clickCount = 0;
 
 const colors = ["#7CB4CF", "#CB98C3", "#FAC7CB", "#5A672D", "#E25F26", "#FEB519"];
 const animalpics=["bear", "cat", "cheeta", "deer", "elephant", "fox", "hippo", "koala", "lama", "lion", "monkey", "panda", "pig","sheep","sloth", "tiger", "raccoon","zebra"];
+const vegetablepics = ["aubergine", "broccoli","cabbage","carrot","garlic","greenpepper","mushroom","onion","pea","potato","pumpkin","radish","redchilli","redpepper","tomato"];
+const moodpics = ["angry","excited","happy","neutral","upset"];
 
 function getRandomPosition() {
     const maxX = window.innerWidth - button.clientWidth;
@@ -49,6 +55,14 @@ function newRandomIndex(){
 
 function newAnimalIndex(){
     return Math.floor(Math.random() * animalpics.length);
+}
+
+function newVegetableIndex(){
+    return Math.floor(Math.random() * vegetablepics.length);
+}
+
+function newMoodIndex(){
+    return Math.floor(Math.random() * moodpics.length);
 }
 
 function startGame() {
@@ -100,7 +114,7 @@ function startGame() {
         }
 
         // specifically for animal game
-        if(animalGame){
+        else if(animalGame){
             const animalPic = newAnimalIndex();
             button.innerHTML = `<img id = "animalpics" src = "animals/${animalpics[animalPic]}.png">`
             colorText.textContent = `click ${animalpics[animalPic].toUpperCase()}`
@@ -110,6 +124,41 @@ function startGame() {
                 fakerandomIndex = animalPic();
             }
             fakeButton.innerHTML = `<img id = "animalpics" src = "animals/${animalpics[fakerandomIndex]}.png"></img>`
+
+            fakeButton.style.backgroundColor = 'none';
+            button.style.backgroundColor = 'none';
+        }
+
+        // specifically for vegetable game
+        else if(vegetableGame){
+            const vegetablePic = newVegetableIndex();
+            button.innerHTML = `<img id = "vegetablepics" src = "vegetables/${vegetablepics[vegetablePic]}.png">`
+            colorText.textContent = `click ${vegetablepics[vegetablePic].toUpperCase()}`
+            
+            let fakerandomIndex = newVegetableIndex();
+            while(fakerandomIndex == vegetablePic){
+                fakerandomIndex = vegetablePic();
+            }
+            fakeButton.innerHTML = `<img id = "vegetablepics" src = "vegetables/${vegetablepics[fakerandomIndex]}.png"></img>`
+
+            fakeButton.style.backgroundColor = 'none';
+            button.style.backgroundColor = 'none';
+        }
+
+        // specifically for mood game
+        else if(moodGame){
+            const moodPic = newMoodIndex();
+            button.innerHTML = `<img id = "moodpics" src = "mood/${moodpics[moodPic]}.png">`
+            colorText.textContent = `click ${moodpics[moodPic].toUpperCase()}`
+            
+            let fakerandomIndex = newMoodIndex();
+            while(fakerandomIndex == moodPic){
+                fakerandomIndex = moodPic();
+            }
+            fakeButton.innerHTML = `<img id = "moodpics" src = "mood/${moodpics[fakerandomIndex]}.png"></img>`
+
+            fakeButton.style.backgroundColor = 'none';
+            button.style.backgroundColor = 'none';
         }
 
         // randomize button position
@@ -166,8 +215,26 @@ function addAnimals() {
     fakeButton.style.display = 'block';
     colorText.style.display = 'block';
 
-    button.style.backgroundColor = 'black';
-    fakeButton.style.backgroundColor = 'black';
+    button.style.backgroundColor = 'none';
+    fakeButton.style.backgroundColor = 'none';
+}
+
+function addVegetables() {
+    vegetableGame = true;
+    fakeButton.style.display = 'block';
+    colorText.style.display = 'block';
+
+    button.style.backgroundColor = 'none';
+    fakeButton.style.backgroundColor = 'none';
+}
+
+function addMood() {
+    moodGame = true;
+    fakeButton.style.display = 'block';
+    colorText.style.display = 'block';
+
+    button.style.backgroundColor = 'none';
+    fakeButton.style.backgroundColor = 'none';
 }
 
 function removeFakeButton() {
@@ -187,6 +254,8 @@ start.addEventListener('click', () => {
     button.style.display= 'block';
 
     animalGame =false;
+    vegetableGame = false;
+    moodGame = false;
     button.innerHTML = ''
 
     clickCount = 0;
@@ -202,6 +271,8 @@ colorStartbutton.addEventListener('click', () => {
     button.style.display= 'block';
 
     animalGame = false;
+    vegetableGame = false;
+    moodGame = false;
     button.innerHTML = ''
     fakeButton.innerHTML = ''
 
@@ -219,7 +290,33 @@ animalStartbutton.addEventListener('click', () => {
     clickCount = 0;
     removeFakeButton();
     addAnimals();
-    button.style.backgroundColor = "black";
+    button.style.backgroundColor = "";
+    startTimer();
+    startGame();
+});
+
+// Click vegetable start button
+vegetableStartbutton.addEventListener('click', () => {
+    gameElement.style.display = 'flex';
+    titleHeader.style.display ='none';
+    button.style.display= 'block';
+    clickCount = 0;
+    removeFakeButton();
+    addVegetables();
+    button.style.backgroundColor = "";
+    startTimer();
+    startGame();
+});
+
+// Click mood start button
+moodStartbutton.addEventListener('click', () => {
+    gameElement.style.display = 'flex';
+    titleHeader.style.display ='none';
+    button.style.display= 'block';
+    clickCount = 0;
+    removeFakeButton();
+    addMood();
+    button.style.backgroundColor = "";
     startTimer();
     startGame();
 });
