@@ -117,7 +117,6 @@ function startGame() {
                     break;
             }
         }
-
         // specifically for animal game
         else if(animalGame){
             const animalPic = newAnimalIndex();
@@ -133,7 +132,6 @@ function startGame() {
             fakeButton.style.backgroundColor = 'none';
             button.style.backgroundColor = 'none';
         }
-
         // specifically for vegetable game
         else if(vegetableGame){
             const vegetablePic = newVegetableIndex();
@@ -149,7 +147,6 @@ function startGame() {
             fakeButton.style.backgroundColor = 'none';
             button.style.backgroundColor = 'none';
         }
-
         // specifically for mood game
         else if(moodGame){
             const moodPic = newMoodIndex();
@@ -184,10 +181,11 @@ function startGame() {
         fakeButton.style.top = `${fakerandomPosition.y}px`;
         clickCount++;
     }
+
     // game over
     else{
         button.style.display = 'none';
-        winScreen.style.display = 'block';
+        winScreen.style.display = 'flex';
         gameElement.style.display = 'none';
         stopTimer();
         total.textContent = `${seconds.toFixed(3)} seconds`;

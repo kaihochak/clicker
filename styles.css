@@ -25,14 +25,6 @@ body {
     height: inherit;
 }
 
-#titleHeader {
-    font-size: 120px;
-    position: fixed;
-    align-items: center; /* Center horizontally */
-    left:50%;
-    transform: translate(-50%, 0);
-    display:block;
-}
 
 #fakeButton {
     position: absolute;
@@ -67,19 +59,18 @@ body {
 }
 
 #restart {
-    position: fixed;
     font-family:testfont;
     padding: 10% 10% 10% 10%;
-    left:50%;
-    transform: translate(-50%, 0);
+    left: 30;
+    transform: translate(-50%, -50%);
     border-radius: 100px; /* Makes the button circular */
-    background-color: #F3ECE5; /* Set your desired background color */
     color: #F3ECE5; /* Set your desired text color */
     border: none;
 }
 
 #winScreen {
-    background-color: #7CB4CF;
+    display: flex;
+    background-color: #438186;
     position: fixed;
     font-size: 20px;
     top: 50%;
@@ -88,5 +79,8 @@ body {
     padding: 20px;
     border-radius: 10px;
     z-index: 2; /* Ensure the container appears above other elements */
+}
+
+#startScreen {
     display: none;
 }

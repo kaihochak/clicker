@@ -1,129 +1,151 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
-  </head>
-  <title>the CLICKER game</title>
+</head>
+<title>the CLICKER game</title>
 
-  <body>
+<body>
     <!-- Start -->
     <div id="background">
-      <div id="startScreen" class="flex flex-col justify-center">
-        <h1
-          class="text-[#438186] text-center tracking-widest drop-shadow-2xl pt-20 pb-10 px-10 font-light text-[60px] sm:pt-40 sm:pb-20 sm:px-20 sm:font-bold sm:text-[120px]"
-        >
-          the CLICKER game
-        </h1>
-        <div class="flex flex-col mx-auto gap-y-8">
-          <button
-            id="start"
-            class="bg-[#438186] text-[#F3ECE5] weight-normal rounded-full tracking-widest font-light shadow-[0_30px_85px_-24px_rgb(0,0,0,0.5)] text-[20px] px-[40px] py-[20px] sm:text-[40px] sm:px-[60px] sm:py-[30px]"
-          >
-            BASIC GAME
-          </button>
-          <div class="flex flex-col mx-auto gap-y-6">
-            <div class="flex gap-x-6">
-              <button
-                id="colorStart"
-                class="bg-[#438186] text-[#F3ECE5] weight-normal rounded-full tracking-widest font-light shadow-[0_30px_85px_-24px_rgb(0,0,0,0.5)] text-[20px] px-[40px] py-[20px] sm:text-[40px] sm:px-[60px] sm:py-[30px]"
-              >
-                COLOR GAME
-              </button>
-              <button
-                id="animalStart"
-                class="bg-[#438186] text-[#F3ECE5] weight-normal rounded-full tracking-widest font-light shadow-[0_30px_85px_-24px_rgb(0,0,0,0.5)] text-[20px] px-[40px] py-[20px] sm:text-[40px] sm:px-[60px] sm:py-[30px]"
-              >
-                ANIMAL GAME
-              </button>
+        <div id="startScreen" class="flex flex-col justify-center">
+
+            <!-- Title -->
+            <h1
+                class="text-[#438186] text-center tracking-widest drop-shadow-2xl pt-20 pb-10 px-10 font-light text-[60px] sm:pt-40 sm:pb-20 sm:px-20 sm:font-bold sm:text-[120px]">
+                the CLICKER game
+            </h1>
+
+            <!-- Start Buttons -->
+            <div class="flex flex-col mx-auto gap-y-8">
+                <!-- Basic -->
+                <button id="start"
+                    class="bg-[#438186] text-[#F3ECE5] weight-normal rounded-full tracking-widest font-light shadow-[0_30px_85px_-24px_rgb(0,0,0,0.5)] text-[20px] px-[40px] py-[20px] sm:text-[40px] sm:px-[60px] sm:py-[30px]">
+                    BASIC GAME
+                </button>
+
+                <!-- Other Modes -->
+                <div class="flex flex-col mx-auto gap-y-6">
+                    <div class="grid grid-cols-2  mx-auto gap-8">
+
+                        <!-- Color -->
+                        <button id="colorStart"
+                            class="bg-[#438186] text-[#F3ECE5] weight-normal rounded-full tracking-widest font-light shadow-[0_30px_85px_-24px_rgb(0,0,0,0.5)] text-[20px] px-[40px] py-[20px] sm:text-[40px] sm:px-[60px] sm:py-[30px]">
+                            COLOR GAME
+                        </button>
+
+                        <!-- Animal -->
+                        <button id="animalStart"
+                            class="bg-[#438186] text-[#F3ECE5] weight-normal rounded-full tracking-widest font-light shadow-[0_30px_85px_-24px_rgb(0,0,0,0.5)] text-[20px] px-[40px] py-[20px] sm:text-[40px] sm:px-[60px] sm:py-[30px]">
+                            ANIMAL GAME
+                        </button>
+
+                        <!-- Veggie -->
+                        <button id="vegetableStart"
+                            class="bg-[#438186] text-[#F3ECE5] weight-normal rounded-full tracking-widest font-light shadow-[0_30px_85px_-24px_rgb(0,0,0,0.5)] text-[20px] px-[40px] py-[20px] sm:text-[40px] sm:px-[60px] sm:py-[30px]">
+                            VEGETABLE GAME
+                        </button>
+
+                        <!-- Mood -->
+                        <button id="moodStart"
+                            class="bg-[#438186] text-[#F3ECE5] weight-normal rounded-full tracking-widest font-light shadow-[0_30px_85px_-24px_rgb(0,0,0,0.5)] text-[20px] px-[40px] py-[20px] sm:text-[40px] sm:px-[60px] sm:py-[30px]">
+                            MOOD GAME
+                        </button>
+
+                    </div>
+                </div>
             </div>
-            <div class="flex gap-x-6">
-              <button
-                id="vegetableStart"
-                class="bg-[#438186] text-[#F3ECE5] weight-normal rounded-full tracking-widest font-light shadow-[0_30px_85px_-24px_rgb(0,0,0,0.5)] text-[20px] px-[40px] py-[20px] sm:text-[40px] sm:px-[60px] sm:py-[30px]"
-              >
-                VEGETABLE GAME
-              </button>
-              <button
-                id="moodStart"
-                class="bg-[#438186] text-[#F3ECE5] weight-normal rounded-full tracking-widest font-light shadow-[0_30px_85px_-24px_rgb(0,0,0,0.5)] text-[20px] px-[40px] py-[20px] sm:text-[40px] sm:px-[60px] sm:py-[30px]"
-              >
-                MOOD GAME
-              </button>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Game -->
-    <div id="game">
-      <!-- dots to be clicked -->
-      <button id="randomButton"></button>
-      <button id="fakeButton"></button>
+        <!-- Game -->
+        <div id="game">
+            <!-- dots to be clicked -->
+            <button id="randomButton"></button>
+            <button id="fakeButton"></button>
 
-      <!-- Game Status -->
-      <div class="flex flex-col h-screen justify-between mx-auto place-items-center">
-        <!-- Title -->
-        <div class="flex-col">
-          <h1
-            id="timer"
-            class="text-[#438186] tracking-widest drop-shadow-2xl pt-10 px-10 font-light text-[60px] sm:pt-20 sm:px-20 sm:font-bold sm:text-[120px]"
-          >
-            TIME: 0 seconds
-          </h1>
-          <h3
-            id="gameplayAverage"
-            class="text-[#438186] tracking-widest drop-shadow-2xl px-10 font-light text-[10px] sm:px-20 sm:font-bold sm:text-[30px]"
-          >
-            0.342
-          </h3>
-          <h3 
-            id="colorText"
-            class="text-[#d64b41] tracking-widest drop-shadow-2xl 
+            <!-- Game Status -->
+            <div class="flex flex-col h-screen justify-between mx-auto place-items-center">
+                <!-- Title -->
+                <div class="flex-col">
+                    <h1 id="timer"
+                        class="text-[#438186] tracking-widest drop-shadow-2xl pt-10 px-10 font-light text-[60px] sm:pt-20 sm:px-20 sm:font-bold sm:text-[120px]">
+                        TIME: 0 seconds
+                    </h1>
+                    <h3 id="gameplayAverage"
+                        class="text-[#438186] tracking-widest drop-shadow-2xl px-10 font-light text-[10px] sm:px-20 sm:font-bold sm:text-[30px]">
+                        0.342
+                    </h3>
+                    <h3 id="colorText" class="text-[#d64b41] tracking-widest drop-shadow-2xl 
                     pt-50 px-20 font-light text-[20px] 
                     sm:pt-100 sm:px-40 sm:font-bold sm:text-[40px]">
-            </h3>
+                    </h3>
+                </div>
+
+                <!-- wrong indicator -->
+                <div id="wrongIndicator">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+                        stroke="#fa2c1d" class="w-10 h-10 sm:w-20 sm:h-20">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </div>
+
+                <!-- exit -->
+                <button id="exit"
+                    class="bg-[#438186] text-[#F3ECE5] weight-normal rounded-full mx-auto tracking-widest font-light shadow-[0_30px_85px_-24px_rgb(0,0,0,0.5)] text-[20px] px-[40px] py-[20px] mb-5 sm:text-[40px] sm:px-[60px] sm:py-[30px] sm:mb-10">
+                    Exit
+                </button>
+            </div>
         </div>
 
-        <!-- wrong indicator -->
-        <div id="wrongIndicator">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1"
-            stroke="#fa2c1d"
-            class="w-10 h-10 sm:w-20 sm:h-20"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
+        <!-- Winning Screen -->
+        <div id="winScreen" class="flex flex-col justify-center bg-[#438186]">
+            
+            <!-- Total Time -->
+            <p 
+                class="text-[#F3ECE5] text-center tracking-widest drop-shadow-2xl 
+                    pt-20 pb-10 px-10 font-light text-[60px] 
+                    sm:pt-10 sm:pb-5 sm:font-bold sm:text-[80px]">
+                Total time
+            </p>
+            <p 
+                id="totalTime"
+                class="text-[#F3ECE5] text-center tracking-widest drop-shadow-2xl 
+                    pt-20 pb-10 px-10 font-extralight text-[60px] 
+                    sm:pb-5 sm:font-light sm:text-[65px]">
+                90
+            </p>
+
+            <!-- Average Time -->
+            <p
+                class="text-[#F3ECE5] text-center tracking-widest drop-shadow-2xl 
+                    px-30 pt-20 pb-10 px-10 font-light text-[60px] 
+                    sm:px-50 sm:pt-10 sm:px-20 sm:font-bold sm:text-[65px]">
+                Average time Between clicks
+            </p>
+            <p 
+                id="time"
+                class="text-[#F3ECE5] text-center tracking-widest drop-shadow-2xl 
+                    pt-20 pb-10 px-10 font-light text-[60px] 
+                    sm:pt-0 sm:pb-0 sm:font-light sm:text-[50px]">
+                100
+            </p>
+
+            <!-- restart -->
+            <button id="restart"
+                class="bg-[#d64b41] text-[#F3ECE5] weight-normal rounded-full 
+                        mx-auto tracking-widest font-light 
+                        shadow-[0_30px_85px_-24px_rgb(0,0,0,0.5)] 
+                        text-[20px] px-[40px] py-[20px] mb-5 
+                        sm:text-[40px] sm:px-[60px] sm:py-[30px] sm:mb-10">
+                restart
+            </button>
         </div>
 
-        <!-- exit -->
-        <button
-          id="exit"
-          class="bg-[#438186] text-[#F3ECE5] weight-normal rounded-full mx-auto tracking-widest font-light shadow-[0_30px_85px_-24px_rgb(0,0,0,0.5)] text-[20px] px-[40px] py-[20px] mb-5 sm:text-[40px] sm:px-[60px] sm:py-[30px] sm:mb-10"
-        >
-          Exit
-        </button>
-      </div>
-    </div>
+        <script src="script.js"></script>
+</body>
 
-    <!-- Winning Screen -->
-    <div id="winScreen">
-      <p>Total time:</p>
-      <p id="totalTime"></p>
-      <p>Average time Between clicks</p>
-      <p id="time"></p>
-      <button id="restart">restart</button>
-    </div>
-    <script src="script.js"></script>
-  </body>
 </html>
