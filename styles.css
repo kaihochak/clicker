@@ -13,6 +13,27 @@ body {
     src: url("AmericanCaptain-MdEY.otf") format("opentype");
 }
 
+#startButtons button{
+    transition: transform 0.05s;
+}
+#startButtons button:active {
+    transform: scale(0.9);
+}
+
+#exit{
+    transition: transform 0.05s;
+}
+#exit:active {
+    transform: scale(0.9);
+}
+
+#restart{
+    transition: transform 0.05s;
+}
+#restart:active {
+    transform: scale(0.9);
+}
+
 #randomButton {
     position: absolute;
     background-color: transparent; 
@@ -30,6 +51,7 @@ body {
 #randomButton:active {
     transform: scale(0.75);
 }
+
 #animalpics {
     width: inherit;
     height: inherit;
