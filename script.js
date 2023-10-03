@@ -348,6 +348,12 @@ exitButton.addEventListener('click', () => {
     titleHeader.style.display ='flex';
     body.style.backgroundImage = 'url("edited-watercolor-rainbow-background.jpg")';
 
+    // reset status of every game
+    colorGame = false;
+    animalGame = false;
+    vegetableGame = false;
+    moodGame = false;
+
     // close game page
     gameElement.style.display = 'none';
 
