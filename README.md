@@ -16,7 +16,7 @@ More about [how we came up with this little game idea](https://kaihochak.github.
 
 Getting started with The Clicker Game is a breeze. 
 
-[Click here to play](https://example.com/your-demo-page](https://clickkerrrr.glitch.me)!
+![Click here to play](https://example.com/your-demo-page](https://clickkerrrr.glitch.me)!
 
 OR Follow these simple steps to run the game on your local machine:
 
