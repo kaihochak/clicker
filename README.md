@@ -1,6 +1,9 @@
 # The Clicker Game
 
-The Clicker Game is an engaging and interactive application designed to improve hand-eye coordination and reflex responses, all while providing a fun and entertaining experience. This game is tailored for kids and offers a variety of modes to keep them engaged and entertained. Whether you're looking to enhance your clicking speed, enjoy colorful visuals, or learn about animals, moods, and vegetables, The Clicker Game has something for everyone.
+The Clicker Game is an engaging and interactive application designed to improve hand-eye coordination and reflex responses, all 
+while providing a fun and entertaining experience. This game is tailored for kids and offers a variety of modes to keep them engaged and entertained. Whether you're looking to enhance your clicking speed, enjoy colorful visuals, or learn about animals, moods, and vegetables, The Clicker Game has something for everyone.
+
+More about [how we came up with this little game idea](https://kaihochak.github.io/clicker.html).
 
 ## Contributors
 
@@ -9,11 +12,13 @@ The Clicker Game is an engaging and interactive application designed to improve 
 - Kusumpreet Kaur Heer
 - Logan Perry-Din
 
-More about [how we came up with this little game idea](https://kaihochak.github.io/clicker.html).
-
 ## Installation
 
-Getting started with The Clicker Game is a breeze. Follow these simple steps to run the game on your local machine:
+Getting started with The Clicker Game is a breeze. 
+
+[Click here to play!](https://example.com/your-demo-page](https://clickkerrrr.glitch.me)
+
+OR Follow these simple steps to run the game on your local machine:
 
 1. Clone the repository to your computer using your preferred version control tool or by downloading the ZIP archive.
 2. Open your favorite code editor or integrated development environment (IDE).
