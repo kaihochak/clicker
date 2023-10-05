@@ -16,7 +16,7 @@ More about [how we came up with this little game idea](https://kaihochak.github.
 
 Getting started with The Clicker Game is a breeze. 
 
-[Click here to play!](https://clickrrrr.glitch.me)
+[Click here to play!](https://kaihochak.github.io/clicker)
 
 OR Follow these simple steps to run the game on your local machine:
 
